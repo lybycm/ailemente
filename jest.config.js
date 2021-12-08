@@ -8,6 +8,6 @@ module.exports = {
     '^.+\\.ts$': 'ts-jest'
   },
   testMatch: ['**/?(*.)+(spec).[jt]s?(x)'],
-  collectCoverage: true,
+  collectCoverage: false,
   coverageReporters: ['json', 'html']
 }
