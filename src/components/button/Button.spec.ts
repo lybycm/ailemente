@@ -20,6 +20,36 @@ describe('按钮测试', () => {
       }
     })
     // size 内部通过class控制
-    expect(wrapper.classes()).toContain('el-button--small')
+    expect(wrapper.classes()).toContain(`el-button--${size}`)
   })
+
+  it('全局设置按钮默认大小', () => {
+    const size = 'mini'
+    const wrapper = mount(Button, {
+      global: {
+        config: {
+          globalProperties: {
+            $AILEMENTE: {
+              size
+            }
+          }
+        }
+      }
+    })
+
+    expect(wrapper.classes()).toContain(`el-button--${size}`)
+  })
+
+  it('按钮主题', () => {
+    const type = 'success'
+    const wrapper = mount(Button, {
+      props: {
+        type
+      }
+    })
+
+    expect(wrapper.classes()).toContain(`el-button--${type}`)
+  })
+
+
 })

@@ -3,7 +3,7 @@
     class="el-container"
     :class="{'is-vertical': isVertival}"
   >
-    <slot></slot>
+    <slot />
   </section>
 </template>
 

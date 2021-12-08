@@ -6,7 +6,7 @@
       type ? `el-button--${type}` : ''
     ]"
   >
-    <slot></slot>
+    <slot />
   </button>
 </template>
 
